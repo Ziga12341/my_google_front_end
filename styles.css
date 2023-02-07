@@ -6,14 +6,12 @@ margin: 20px;
 padding: 10px;
 }
 
-.links.first {
-position:absolute;
-top: 8px;
-right: 16px;
+ul {
+margin: 0px;
+padding: 0px;
+list-style-type: none;
 }
 
-.links.second {
-position:absolute;
-top: 8px;
-right: 300px;
+li {
+float: right;
 }
