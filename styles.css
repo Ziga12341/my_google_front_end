@@ -4,7 +4,16 @@ color: blue;
 text-align: align-right;
 margin: 20px;
 padding: 10px;
+}
+
+.links.first {
 position:absolute;
-top:0;
-right:0;
+top: 8px;
+right: 16px;
+}
+
+.links.second {
+position:absolute;
+top: 8px;
+right: 300px;
 }
