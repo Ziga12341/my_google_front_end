@@ -5,14 +5,27 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <ul>
-            <li><a class="links" href="google_advanced_search.html">Google Advanced Search</a></li>
-            <li><a class="links" href="google_image_search.html">Google Image Search</a></li>
-
-        </ul>
-        <form action="https://www.google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
+        <div id="root_container">
+            <ul>
+                <li>
+                    <div id="header">
+                        <ul>
+                            <li><a class="links" href="google_advanced_search.html">Google Advanced Search</a></li>
+                            <li><a class="links" href="google_image_search.html">Google Image Search</a></li>
+                        </ul>
+                   </div>
+                </li>
+                <li>
+                    <div class="form">
+                        <form action="https://www.google.com/search">
+                            <ul id="search_list">
+                                <li><input id="search_bar" type="text" name="q" placeholder="Type what you are searching for"></li>
+                                <li><input id="submit" type="submit" value="Google Search"></li>
+                            </ul>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </body>
 </html>

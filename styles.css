@@ -2,16 +2,55 @@
 font-size: 24px;
 color: blue;
 text-align: align-right;
-margin: 20px;
+margin: 5px;
+padding: 5px;
+}
+
+#header ul, .form  ul {
+list-style-type: none;
+float:center;
+}
+
+#header li {
+float: right;
+}
+
+#search_bar {
+border-radius: 24px;
+height: 44px;
+width: 638px;
+}
+
+.form {
+text-align-last: center;
+}
+
+#submit {
+font-size: 22px;
+padding: 10px;
+margin: 10px;
+text-align: centered;
+align-items: center;
+justify-content: center;
+}
+
+#root_container ul {
+list-style-type: none;
 padding: 10px;
 }
 
-ul {
-margin: 0px;
-padding: 0px;
-list-style-type: none;
+#root_container li {
+padding: 10px;
 }
 
-li {
-float: right;
+
+#search_list li {
+}
+
+#search_bar {
+text-font: 20px
+}
+
+#submit {
+border-radius: 24px;
 }
