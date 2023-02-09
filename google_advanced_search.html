@@ -5,11 +5,42 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="header">
-            <ul>
-                <li><a class="links" href="index.html">Google Search</a></li>
-            </ul>
+        <div class="header">
+            <div>
+                <a class="links" href="index.html">Google Search</a>
+            </div>
         </div>
-        Hello, world!
+        <div class="advanced_form_container">
+            <form action="https://www.google.com/search">
+                <label>Find pages with...</label>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="all_words">all these words:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="all_words" name="as_q">
+                    </div>
+                    <div class="col-25">
+                        <label for="exact_word">this exact word or phrase:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="exact_word" name="as_epq">
+                    </div>
+                    <div class="col-25">
+                        <label for="any_word">any of these words:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="any_word" name="as_oq">
+                    </div>
+                    <div class="col-25">
+                        <label for="none_word">none of these words:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="none_word" name="as_eq">
+                    </div>
+                    <input id="submit_advanced_search" type="submit" value="Google Advanced Search">
+                </div>
+            </form>
+        </div>
     </body>
 <html>
