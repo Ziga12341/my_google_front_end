@@ -31,6 +31,7 @@ padding: 5px;
 .header .links {
 float: right;
 margin: 20px;
+height: 90  px;
 }
 
 .search_bar, .col-75 > input {
@@ -73,6 +74,7 @@ height: 100%;
 margin: 0;
 padding: 0;
 min-width: 400px;
+height: 90px;
 }
 .advanced_form_container {
 font-family: arial,sans-serif;
@@ -113,4 +115,13 @@ padding: 20px;
 background: #8ab4f8;
 border-radius: 4px;
 border: 1px solid #3079ed
+}
+.footer, .footer > a{
+height:90px;
+font-size: 14px;
+text-align: align-right;
+text-align-last: right;
+margin: 20px;
+font-family: arial,sans-serif;
+color: #8ab4f8;
 }
