@@ -1,7 +1,28 @@
+html {
+min-width: 400px;
+}
+body_container {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+body, input, button {
+font-size: 14px;
+font-family: arial,sans-serif;
+color: #bdc1c6;
+min-width: 400px;
+}
+body {
+background: #202124;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
 .links {
 font-family: arial,sans-serif;
 font-size: 24px;
-color: blue;
+color: #8ab4f8;
 text-align: align-right;
 margin: 5px;
 padding: 5px;
@@ -13,14 +34,21 @@ margin: 20px;
 }
 
 .search_bar, .col-75 > input {
+background-color: transparent;
 border-radius: 24px;
+color: #e8eaed;
 height: 44px;
 width: 638px;
+margin: 10px;
+}
+input.search_bar {
+border: 1px solid #5f6368;
 }
 
 .col-75 > input, .col-25 > label {
+font-size: 14px;
 font-family: arial,sans-serif;
-font-size:24px;
+color: #bdc1c6;
 }
 
 .form {
@@ -28,16 +56,24 @@ text-align-last: center;
 }
 
 .submit {
+background-color: #303134;
+border: 1px solid #303134;
+border-radius: 4px;
+color: #e8eaed;
 font-family: arial,sans-serif;
-font-size: 22px;
+font-size: 14px;
 padding: 10px;
 margin: 10px;
 text-align: centered;
 align-items: center;
 justify-content: center;
-border-radius: 4px;
 }
-
+.form_container {
+height: 100%;
+margin: 0;
+padding: 0;
+min-width: 400px;
+}
 .advanced_form_container {
 font-family: arial,sans-serif;
 font-size: 32px;
@@ -62,8 +98,11 @@ width: 75%;
 margin-top: 5px
 }
 .row input{
+text-align:left;
+font-size: 14px;
 font-family: arial,sans-serif;
-text-align:left
+color: #bdc1c6;
+border: 1px solid #5f6368;
 }
 #submit_advanced_search {
 font-family: arial,sans-serif;
