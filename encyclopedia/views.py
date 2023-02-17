@@ -10,7 +10,9 @@ def index(request):
 
 
 def entries(request, title):
-    if title.capitalize() or title.uppercase() or title.lowercase in util.list_entries():
+    if title.capitalize() in util.list_entries() or\
+            title.upper() in util.list_entries() or\
+            title.lower() in util.list_entries():
         return render(request, "encyclopedia/entry.html", {
             "entry": markdown2.markdown(util.get_entry(title)),
             "page_title": title.capitalize(),
