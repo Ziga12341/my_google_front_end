@@ -17,8 +17,6 @@ def entries(request, title):
             "entry": markdown2.markdown(get_entry(title)),
             "page_title": title.capitalize(),
         })
-    else:
-        return render(request, "encyclopedia/entry.html", {
-            "entry": f"Error: requested page {title.capitalize()} was not found",
-            "page_title": title.capitalize(),
-        })
+    return render(request, "encyclopedia/error_page.html", {
+        "error": f'Error: requested page "{title.capitalize()}" was not found',
+    })
