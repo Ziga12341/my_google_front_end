@@ -20,3 +20,9 @@ def entries(request, title):
     return render(request, "encyclopedia/error_page.html", {
         "error": f'Error: requested page "{title.capitalize()}" was not found',
     })
+
+    # previous version with layout
+    # return render(request, "encyclopedia/entry.html", {
+    #     "entry": f"Error: requested page {title.capitalize()} was not found",
+    #     "page_title": title.capitalize(),
+    # })
