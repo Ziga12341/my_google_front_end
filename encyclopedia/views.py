@@ -3,8 +3,6 @@ import markdown2
 from encyclopedia.util import list_entries, get_entry, save_entry
 from django import forms
 
-src = ["1", "2", "3"]
-
 
 class SearchEntryForm(forms.Form):
     entry = forms.CharField(label="Type entry name you search for:")
@@ -22,13 +20,13 @@ def index(request):
 
             # Isolate the task from the 'cleaned' version of form data
             entry = form.cleaned_data["entry"]
+
+            # return entry from show entry function
             return show_entry(request, entry)
 
     return render(request, f"encyclopedia/index.html", {
         "entries": list_entries(),
-        "src": src,
         "form": SearchEntryForm(),
-
     })
 
 
