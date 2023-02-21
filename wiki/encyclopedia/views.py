@@ -41,9 +41,18 @@ def show_entry(request, title):
             "form": SearchEntryForm(),
         })
 
-    return render(request, "encyclopedia/entry.html", {
-        "entry": f"Error: requested page {title.capitalize()} was not found.\n"
-                 f"Use search on left side of the page.",
-        "page_title": title.capitalize(),
+    return show_search_results(request, title)
+
+
+def show_search_results(request, searched_query):
+    matched_entries = [entry for entry in list_entries() if searched_query in entry]
+    if matched_entries:
+        return render(request, "encyclopedia/search_result.html", {
+            "results": f"Results for your search '{searched_query}' are:",
+            "matched_entries": matched_entries,
+            "form": SearchEntryForm(),
+        })
+    return render(request, "encyclopedia/search_result.html", {
+        "results": f'There is no results for particular search: "{searched_query}"',
         "form": SearchEntryForm(),
     })
