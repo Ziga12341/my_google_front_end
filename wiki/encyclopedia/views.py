@@ -1,7 +1,8 @@
 from django.shortcuts import render
 import markdown2
-from encyclopedia.util import list_entries, get_entry, save_entry
+from .util import list_entries, get_entry, save_entry
 from django import forms
+from django.http import HttpResponseRedirect
 
 
 class SearchEntryForm(forms.Form):
@@ -21,8 +22,8 @@ def index(request):
             # Isolate the task from the 'cleaned' version of form data
             entry = form.cleaned_data["entry"]
 
-            # return entry from show entry function
-            return show_entry(request, entry)
+            # return url with entry
+            return HttpResponseRedirect(f'/wiki/{entry}')
 
     return render(request, f"encyclopedia/index.html", {
         "entries": list_entries(),
@@ -39,6 +40,7 @@ def show_entry(request, title):
             "page_title": title.capitalize(),
             "form": SearchEntryForm(),
         })
+
     return render(request, "encyclopedia/entry.html", {
         "entry": f"Error: requested page {title.capitalize()} was not found.\n"
                  f"Use search on left side of the page.",

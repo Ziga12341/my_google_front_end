@@ -1,6 +1,6 @@
 from django.urls import path
 
-from encyclopedia.views import show_entry, index
+from .views import show_entry, index
 
 app_name = "wiki"
 urlpatterns = [
