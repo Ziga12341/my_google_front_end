@@ -7,11 +7,24 @@ src = ["1", "2", "3"]
 
 
 class SearchEntryForm(forms.Form):
-    entry = forms.CharField(label="Entry Search")
+    entry = forms.CharField(label="Type entry name you search for:")
 
 
 def index(request):
-    return render(request, "encyclopedia/index.html", {
+    # Check if method is POST
+    if request.method == "POST":
+
+        # Take in the data the user submitted and save it as form
+        form = SearchEntryForm(request.POST)
+
+        # Check if form data is valid (server-side)
+        if form.is_valid():
+
+            # Isolate the task from the 'cleaned' version of form data
+            entry = form.cleaned_data["entry"]
+            return show_entry(request, entry)
+
+    return render(request, f"encyclopedia/index.html", {
         "entries": list_entries(),
         "src": src,
         "form": SearchEntryForm(),
@@ -27,6 +40,7 @@ def show_entry(request, title):
             "entry": markdown2.markdown(get_entry(title)),
             "page_title": title.capitalize(),
             "src": src,
+            "form": SearchEntryForm(),
         })
     return render(request, "encyclopedia/entry.html", {
         "entry": f"Error: requested page {title.capitalize()} was not found",
