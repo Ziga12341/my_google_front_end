@@ -37,10 +37,11 @@ def show_entry(request, title):
         return render(request, "encyclopedia/entry.html", {
             "entry": markdown2.markdown(get_entry(title)),
             "page_title": title.capitalize(),
-            "src": src,
             "form": SearchEntryForm(),
         })
     return render(request, "encyclopedia/entry.html", {
-        "entry": f"Error: requested page {title.capitalize()} was not found",
+        "entry": f"Error: requested page {title.capitalize()} was not found.\n"
+                 f"Use search on left side of the page.",
         "page_title": title.capitalize(),
+        "form": SearchEntryForm(),
     })
