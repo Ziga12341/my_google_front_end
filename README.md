@@ -2,8 +2,8 @@
 
 Static .html
 
-Awaliable on [My github pages](https://ziga12341.github.io/)
+Avaliable on [My Github Pages](https://ziga12341.github.io/)
 
 ## How it works
 
-[Youtube video how page works](https://youtu.be/9tFwEkGOFPc)
+[YouTube video how the page works](https://youtu.be/9tFwEkGOFPc)
