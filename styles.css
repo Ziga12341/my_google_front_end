@@ -2,7 +2,7 @@ html {
 height: 800px;
 min-width: 400px;
 }
-body_container {
+.body-container {
 display: flex;
 flex-direction: column;
 height: 100%;
@@ -24,8 +24,6 @@ padding: 0;
 font-family: arial,sans-serif;
 font-size: 24px;
 color: #8ab4f8;
-text-align: align-right;
-margin: 5px;
 padding: 5px;
 }
 
@@ -35,17 +33,16 @@ margin: 20px;
 height: 90px;
 }
 
-.search_bar{
+.search-bar{
 background-color: transparent;
 border-radius: 24px;
-color: #e8eaed;
 height: 44px;
 width: 638px;
 margin: 10px;
 }
 
 
-.col-75 > input{
+.column > input{
 background-color: transparent;
 border-radius: 4px;
 color: #e8eaed;
@@ -53,12 +50,12 @@ height: 30px;
 margin: 5px;
 }
 
-input.search_bar {
+input.search-bar {
 border: 1px solid #5f6368;
 }
 
-.col-75 > input, .col-25 > label {
-font-size: 14px;
+.column > input, .column > label {
+font-size: 18px;
 font-family: arial,sans-serif;
 color: #bdc1c6;
 }
@@ -68,38 +65,30 @@ text-align-last: center;
 }
 
 .submit {
+font-size: 28px;
 background-color: #303134;
-border: 1px solid #303134;
 border-radius: 4px;
-color: #e8eaed;
 font-family: arial,sans-serif;
-font-size: 14px;
-padding: 10px;
 margin: 10px;
-text-align: centered;
 align-items: center;
 justify-content: center;
-margin: 11px 4px;
-padding: 0 16px;
 line-height: 27px;
 height: 36px;
 min-width: 54px;
-text-align: center;
 }
-.form_container {
-height: 100%;
+.form-container {
 margin: 0;
 padding: 0;
 min-width: 400px;
 height: 90px;
 }
-.advanced_form_container {
+.advanced-form-container {
 font-family: arial,sans-serif;
 font-size: 32px;
 margin: 20px;
 padding: 35px;
 }
-.image_form_container {
+.image-form-container {
 margin: 20px;
 padding: 80px;
 height: 400px;
@@ -107,39 +96,35 @@ height: 400px;
 .row {
 margin: 20px;
 }
-.col-25{
+.left{
 float: left;
 width: 25%;
 }
-.col-75{
+.right{
 float: left;
 width: 75%;
-margin-top: 5px
-border: 1px solid #5f6368;
 }
 .row input{
 text-align:left;
-font-size: 14px;
 font-family: arial,sans-serif;
 color: #bdc1c6;
 border: 1px solid #5f6368;
 }
-#submit_advanced_search {
+#submit-advanced-search {
 font-family: arial,sans-serif;
 font-size: 24px;
 color: white;
 margin: 20px;
 background: #8ab4f8;
 border-radius: 4px;
-border: 1px solid #3079ed
-height: 0px;
+border: 1px solid #3079ed;
+height: 32px;
 min-width: 120px;
 text-align: center;
 }
 .footer, .footer > a{
 height:90px;
 font-size: 14px;
-text-align: align-right;
 text-align-last: right;
 margin: 20px;
 font-family: arial,sans-serif;
